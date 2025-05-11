@@ -1,0 +1,267 @@
+/* Reset */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+footer,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* body {
+  overflow-x: hidden;
+} */
+
+/* Reset */
+
+/* geral */
+
+.row {
+  --bs-gutter-x: 0rem;
+}
+
+.bg-claro {
+  background-color: rgb(241, 243, 227);
+}
+
+.bg-escuro {
+  background-color: #424242;
+}
+
+.bg-preto {
+  background-color: black;
+}
+
+.bg-branco {
+  background-color: white;
+}
+
+.bg-azul {
+  background-color: #8cc9cc;
+}
+
+.bg-azul2 {
+  background-color: #4f8c8f;
+}
+
+.cor-principal {
+  color: #8cc9cc;
+}
+
+.cor-clara {
+  color: rgb(215, 216, 210);
+}
+
+.cor-escura {
+  color: rgb(112, 112, 112);
+}
+
+.cor-escura2 {
+  color: #525252;
+}
+
+.cor-preta {
+  color: #0e0e0e;
+}
+
+.button-principal {
+  padding: 15px 30px;
+  font-size: 1.25rem;
+  border-radius: 2rem;
+  color: #fff;
+  background-color: #0e0e0e;
+  border-color: #0e0e0e;
+}
+
+.button-principal:hover {
+  color: #fff;
+  background-color: #424242;
+}
+
+.button-secundario {
+  padding: 15px 30px;
+  font-size: 1.25rem;
+  border-radius: 2rem;
+  color: #fff;
+  background-color: #8cc9cc;
+}
+
+.button-secundario:hover {
+  color: #fff;
+  background-color: #4f8c8f;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Navegação */
+
+.nav-cima {
+  color: white;
+}
+
+.animacao {
+  transition: transform 0.2s ease;
+}
+
+.animacao:hover {
+  transform: translate3d(0, -5px, 0);
+}
+
+.link {
+  color: #0e0e0e;
+  font-size: 1.15rem;
+}
+
+.link:hover {
+  color: #8cc9cc;
+}
+
+/* Navegação */
+
+/* Section inicio */
+.lead {
+  font-size: 1.5rem;
+}
+
+.imagem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-image: url("imgs/decoracao.png");
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.imagem img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn-lg {
+  padding: 15px 30px;
+}
+
+.linha {
+  display: inline-block;
+  height: 2px; /* Espessura da linha */
+  background-color: white; /* Cor da linha */
+  width: 30%; /* Largura da linha */
+  margin: 1.5rem 0;
+}
+/* Section inicio */
+
+/* Section serviços */
+
+.box-shadow {
+  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.box-shadow:hover {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* .redonda {
+  border-radius: 10rem;
+} */
+
+/* Section serviços */
+
+/* Section divisoria */
+.bgimg {
+  height: 550px;
+  background-image: url(imgs/correspondente-bancariio2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+/* Section divisoria */
+
+@media (max-width: 1310px) {
+  .maior {
+    font-size: 3rem;
+  }
+  .lead {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .nav-cima {
+    display: none;
+  }
+}
+
+@media (max-width: 1080px) {
+  .imagem img {
+    display: none;
+  }
+
+  .imagem {
+    display: block;
+    text-align: center;
+  }
+}
+
+@media (max-width: 310px) {
+  .button-principal {
+    font-size: 0.7rem;
+  }
+
+  .button-secundario {
+    font-size: 0.7rem;
+  }
+}
+
+/* Plugin animação */
+
+.fadeInDown {
+  transform: translate3d(0, -20px, 0);
+}
+.fadeInUp {
+  transform: translate3d(0, 20px, 0);
+}
+.fadeInRight {
+  transform: translate3d(20px, 0, 0);
+}
+.fadeInLeft {
+  transform: translate3d(-20px, 0, 0);
+}
+
+/* 7 Adicione o CSS Essencial abaixo */
+[data-anime] {
+  opacity: 0;
+}
+.anime {
+  opacity: 1;
+  transform: none;
+  transition: transform 0.8s, opacity 0.8s;
+}
+
+/* Plugin Animação */
+
+/* Animação */
+.js-scroll {
+  opacity: 0;
+  transform: translate3d(-30px, 0, 0);
+}
+
+.js-scroll.ativo {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+  transition: 0.3s;
+}
+/* Animação */
