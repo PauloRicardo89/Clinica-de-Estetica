@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60">
+  <style>
+    .text { fill: #4f8c8f; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 20px; }
+    .circle { fill: #8cc9cc; stroke: #4f8c8f; stroke-width: 2; }
+    .lotus { fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; }
+  </style>
+  <circle class="circle" cx="30" cy="30" r="28" />
+  <path class="lotus" d="M30,45 C35,40 40,30 40,20 C33,25 30,30 30,35 C30,30 27,25 20,20 C20,30 25,40 30,45 Z" />
+  <text class="text" x="30" y="54" text-anchor="middle">BELLA</text>
+</svg>

@@ -1,4 +1,15 @@
+/* Importando a fonte Roboto */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
 /* Reset */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+}
 
 h1,
 h2,
@@ -13,15 +24,19 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
 }
 
 a {
   text-decoration: none;
 }
 
-/* body {
+body {
   overflow-x: hidden;
-} */
+  width: 100%; /* Garante que o body ocupe a largura total */
+  margin: 0; /* Remove margens */
+  padding: 0; /* Remove padding */
+}
 
 /* Reset */
 
@@ -32,11 +47,11 @@ a {
 }
 
 .bg-claro {
-  background-color: rgb(241, 243, 227);
+  background-color: #f8f9fa; /* Tom de cinza mais suave */
 }
 
 .bg-escuro {
-  background-color: #424242;
+  background-color: #343a40; /* Tom de cinza escuro padrão Bootstrap */
 }
 
 .bg-preto {
@@ -56,61 +71,173 @@ a {
 }
 
 .cor-principal {
-  color: #8cc9cc;
+  color: #4f8c8f; /* Ajustar para um tom mais escuro do azul */
 }
 
 .cor-clara {
-  color: rgb(215, 216, 210);
+  color: #ffffff; /* Mudado de rgb(215, 216, 210) para branco puro */
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); /* Sombra sutil para melhorar legibilidade */
 }
 
 .cor-escura {
-  color: rgb(112, 112, 112);
+  color: #6c757d; /* Tom de cinza padrão Bootstrap */
 }
 
 .cor-escura2 {
-  color: #525252;
+  color: #495057; /* Tom de cinza mais escuro padrão Bootstrap */
 }
 
 .cor-preta {
-  color: #0e0e0e;
+  color: #212529; /* Tom de preto padrão Bootstrap */
+}
+
+/* Botões Base */
+.button-base {
+  padding: 12px 20px; /* Reduzido padding horizontal */
+  font-size: 1rem; /* Reduzido tamanho da fonte base */
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  border: none;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 100%; /* Garante que o botão não exceda o contêiner pai */
+  white-space: normal; /* Permite quebra de linha natural do texto */
+  word-wrap: break-word; /* Quebra palavras longas para evitar overflow */
+  /* overflow: hidden; // Removido para evitar corte do botão/texto */
+  /* text-overflow: ellipsis; // Removido pois white-space:normal lida com texto longo */
+}
+
+.button-base:hover {
+  transform: translateY(-2px);
 }
 
 .button-principal {
-  padding: 15px 30px;
-  font-size: 1.25rem;
-  border-radius: 2rem;
+  /* Herda de button-base e especifica cores */
   color: #fff;
-  background-color: #0e0e0e;
-  border-color: #0e0e0e;
+  background-color: #343a40; /* Usar cor escura para principal */
 }
 
 .button-principal:hover {
   color: #fff;
-  background-color: #424242;
+  background-color: #23272b; /* Escurecer no hover */
 }
 
 .button-secundario {
-  padding: 15px 30px;
-  font-size: 1.25rem;
-  border-radius: 2rem;
-  color: #fff;
+  /* Herda de button-base e especifica cores */
+  color: #343a40; /* Alterado de #fff para melhor contraste */
   background-color: #8cc9cc;
 }
 
 .button-secundario:hover {
-  color: #fff;
-  background-color: #4f8c8f;
+  color: #343a40; /* Manter a cor do texto no hover */
+  background-color: #7abcc0; /* Levemente mais escuro no hover */
+}
+
+/* Estilo específico para o botão de agendamento no menu, se necessário manter o padding/fonte */
+.agendamento-btn.button-secundario {
+  /* Mais específico */
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px; /* Limita a largura máxima dos contêineres */
+  padding-left: 15px; /* Garante espaço nas laterais */
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
 }
 
 img {
   max-width: 100%;
   height: auto;
+  vertical-align: middle; /* Alinhar imagens verticalmente por padrão */
 }
 
 /* Navegação */
 
 .nav-cima {
   color: white;
+  font-size: 0.9rem;
+  padding: 0; /* Removido padding para controlar exatamente */
+  height: 40px; /* Altura fixa para controle preciso */
+}
+
+/* Ajustes para o menu superior (nav-cima) */
+.nav-cima .row {
+  display: flex;
+  align-items: center; /* Alinhar verticalmente os itens da linha */
+  justify-content: space-between; /* Espaçar horizontalmente */
+  height: 40px; /* Altura fixa igual ao container pai */
+}
+
+.nav-cima .link-cima {
+  display: flex; /* Usar flex para alinhar ícone e texto */
+  align-items: center; /* Alinhar verticalmente ícone e texto */
+  height: 100%; /* Ocupar toda a altura */
+}
+
+.nav-cima .link-cima:first-child {
+  justify-content: flex-start; /* Alinhar primeiro item à esquerda */
+}
+
+.nav-cima .link-cima:last-child {
+  justify-content: flex-end; /* Alinhar segundo item à direita */
+}
+
+.nav-cima img {
+  margin-right: 8px;
+  display: inline-block; /* Para garantir alinhamento adequado */
+  width: 16px; /* Tamanho fixo */
+  height: 16px; /* Tamanho fixo */
+  vertical-align: text-bottom; /* Alinhamento perfeito com o texto */
+}
+
+@media (max-width: 991px) {
+  /* Telas menores que LG */
+  .nav-cima .link-cima {
+    justify-content: flex-start; /* Alinhar à esquerda em telas menores */
+    padding: 5px 0; /* Adicionar um pouco de espaçamento vertical */
+  }
+  .nav-cima .row > .col-lg-6:last-child .link-cima {
+    justify-content: flex-start; /* Manter alinhamento à esquerda para o segundo item também */
+  }
+}
+
+/* Estilo para a barra de navegação principal */
+.navbar {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  padding-left: 0;
+  justify-content: space-between; /* Distribuição mais uniforme do espaço */
+  flex-wrap: wrap;
+  margin-left: auto; /* Empurra a navegação para a direita */
+}
+
+.navbar-nav .nav-item {
+  display: inline-block;
+  margin: 0 8px; /* Reduzido o espaçamento horizontal para evitar overflow */
+}
+
+.navbar-nav .nav-link {
+  padding: 8px 12px; /* Padding consistente */
+  text-align: center;
+  white-space: nowrap; /* Evitar quebra de linha */
+}
+
+/* Espaço especial para botão de agendamento */
+.btn-nav-item {
+  margin-left: 15px !important;
 }
 
 .animacao {
@@ -122,19 +249,23 @@ img {
 }
 
 .link {
-  color: #0e0e0e;
-  font-size: 1.15rem;
+  color: #343a40; /* Cor mais escura para links do menu */
+  font-size: 1.1rem;
+  font-weight: 500;
+  display: inline-block; /* Para comportamento consistente */
 }
 
 .link:hover {
-  color: #8cc9cc;
+  color: #4f8c8f; /* Alterado de #8cc9cc para azul mais escuro */
 }
 
 /* Navegação */
 
 /* Section inicio */
 .lead {
-  font-size: 1.5rem;
+  font-size: 1.3rem; /* Ajustar para melhor leitura */
+  font-weight: 300;
+  line-height: 1.6;
 }
 
 .imagem {
@@ -157,73 +288,269 @@ img {
 
 .linha {
   display: inline-block;
-  height: 2px; /* Espessura da linha */
-  background-color: white; /* Cor da linha */
-  width: 30%; /* Largura da linha */
-  margin: 1.5rem 0;
+  height: 3px;
+  background-color: white;
+  width: 50px; /* Largura fixa menor */
+  margin: 1rem 0;
 }
+
+/* Seção Sobre */
+#sobre {
+  background-color: #f9f9f9;
+  padding: 60px 0; /* Aumentado padding vertical */
+  text-align: center; /* Centraliza o conteúdo da seção */
+}
+
+#sobre .container {
+  max-width: 1140px; /* Limita a largura máxima */
+  margin: 0 auto; /* Centraliza o contêiner */
+}
+
+#sobre .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#sobre .col-md-6 {
+  padding: 20px; /* Adiciona espaçamento interno nas colunas */
+}
+
+#sobre .linha {
+  background-color: #4f8c8f; /* Use a cor azul2 */
+  margin: 1rem auto;
+  display: block;
+}
+
+#sobre img {
+  transition: transform 0.3s ease;
+  max-height: 350px;
+  object-fit: cover;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra suave */
+  width: 100%; /* Largura responsiva */
+}
+
+#sobre img:hover {
+  transform: scale(1.02);
+}
+
+#sobre ul {
+  list-style: none;
+  padding-left: 0;
+  text-align: left; /* Alinha o texto das listas à esquerda */
+}
+
+#sobre ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+#sobre ul li:before {
+  content: "✓";
+  color: #8cc9cc;
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+#sobre p {
+  text-align: left; /* Alinha os parágrafos à esquerda */
+  margin-bottom: 15px; /* Adiciona espaço entre os parágrafos */
+}
+
+#sobre h2 {
+  text-align: left; /* Alinha os títulos à esquerda */
+  margin-bottom: 20px; /* Adiciona espaço abaixo do título */
+}
+
+@media (max-width: 767px) {
+  #sobre .col-md-6 {
+    padding: 15px 25px; /* Mais padding horizontal em dispositivos móveis */
+  }
+
+  #sobre img {
+    margin-bottom: 20px; /* Espaço abaixo da imagem em dispositivos móveis */
+  }
+}
+
 /* Section inicio */
 
 /* Section serviços */
-
-.box-shadow {
-  box-shadow: 0 2px 0px 0 rgba(0, 0, 0, 0.1), 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+.service-card {
+  /* Nova classe para envolver cada serviço */
+  padding: 20px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  border-radius: 8px; /* Bordas levemente arredondadas para o card */
 }
 
-.box-shadow:hover {
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1), 0 4px 15px 0 rgba(0, 0, 0, 0.1);
+.service-card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
 }
 
-/* .redonda {
-  border-radius: 10rem;
-} */
+.redonda {
+  border-radius: 50%;
+  width: 120px; /* Tamanho ajustado */
+  height: 120px; /* Tamanho ajustado */
+  object-fit: cover;
+  margin-bottom: 15px;
+  border: 3px solid #8cc9cc; /* Adicionar uma borda sutil */
+}
 
 /* Section serviços */
 
-/* Section divisoria */
-.bgimg {
-  height: 550px;
-  background-image: url(imgs/correspondente-bancariio2.jpg);
+/* Section divisoria CTA */
+.section-divider-cta {
+  height: auto;
+  padding: 60px 0;
+  background-image: url(imgs/correspondente-bancariio2.jpg); /* Mantido o nome original, verificar se é a imagem correta */
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; /* Efeito parallax */
+  background-position: center;
 }
+
+.section-divider-cta h2 {
+  margin-bottom: 1.5rem; /* Espaçamento abaixo do título */
+}
+
 /* Section divisoria */
 
-@media (max-width: 1310px) {
-  .maior {
-    font-size: 3rem;
-  }
-  .lead {
-    font-size: 1.3rem;
-  }
+/* FAQ */
+#perguntas .card {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.95
+  ); /* Aumentado opacidade do fundo para maior contraste */
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-@media (max-width: 1200px) {
-  .nav-cima {
-    display: none;
-  }
+#perguntas .lead {
+  display: block; /* Para o link ocupar toda a largura */
+  padding: 12px 15px; /* Aumentado padding para maior área clicável */
+  transition: color 0.3s ease, background-color 0.3s ease; /* Adicionar transição para hover */
+  border-radius: 5px;
+  font-weight: 600;
+  color: #ffffff;
+  position: relative;
+  padding-left: 30px; /* Espaço para o ícone */
 }
 
-@media (max-width: 1080px) {
-  .imagem img {
-    display: none;
-  }
-
-  .imagem {
-    display: block;
-    text-align: center;
-  }
+#perguntas .lead:before {
+  content: "➕"; /* Ícone de mais */
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8em;
+  transition: transform 0.3s;
 }
 
-@media (max-width: 310px) {
-  .button-principal {
-    font-size: 0.7rem;
-  }
+#perguntas .lead[aria-expanded="true"]:before {
+  content: "➖"; /* Ícone de menos quando expandido */
+}
 
-  .button-secundario {
-    font-size: 0.7rem;
-  }
+#perguntas .lead:hover {
+  color: #ffffff; /* Cor mais clara no hover para o link da FAQ */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+#perguntas .collapse p {
+  padding: 15px 20px;
+  background-color: #ffffff;
+  margin: 0;
+  border-radius: 0 0 8px 8px;
+  color: #343a40;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+#perguntas hr.dropdown-divider {
+  border-color: rgba(255, 255, 255, 0.2);
+  margin: 12px 0;
+}
+
+/* Footer */
+#contato {
+  background-color: #4f8c8f; /* bg-azul2 */
+  padding-top: 3.5rem; /* Aumentar padding superior */
+  padding-bottom: 3.5rem; /* Aumentar padding inferior */
+  border-bottom: none; /* Garantir que não haja borda inferior */
+  margin-bottom: 0; /* Garantir que não haja margem inferior */
+}
+
+#contato h4 {
+  font-weight: 700; /* Fonte mais forte para títulos do rodapé */
+  margin-bottom: 1.5rem; /* Mais espaço abaixo do título */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  font-size: 1.4rem; /* Aumentar tamanho da fonte */
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.8rem;
+  display: inline-block;
+}
+
+.footer-info li {
+  font-size: 1.1rem !important; /* Aumentar tamanho da fonte */
+  font-weight: 400 !important; /* Texto mais legível */
+  line-height: 2.2 !important; /* Mais espaçamento entre linhas */
+  color: #ffffff !important; /* Cor mais clara para o texto */
+  margin-bottom: 0.8rem !important; /* Espaçamento entre itens */
+  display: flex;
+  align-items: center;
+}
+
+.footer-info li img {
+  margin-right: 10px;
+  width: 18px;
+  height: 18px;
+}
+
+.footer-info .btn {
+  font-size: 0.85rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+}
+
+.footer-bottom-links {
+  background-color: #343a40; /* bg-escuro */
+  padding: 1.2rem 0; /* Padding ajustado */
+  width: 100%; /* Garantir largura total */
+  margin-top: 0; /* Garantir que não haja margem superior */
+  border-top: none; /* Garantir que não haja borda superior */
+}
+
+.footer-bottom-links .row {
+  width: 100%; /* Garantir que a linha ocupe toda a largura */
+  margin: 0 auto; /* Centralizar */
+  display: flex;
+  align-items: center;
+  justify-content: space-around; /* Distribuir espaço uniformemente */
+}
+
+.footer-bottom-links a,
+.footer-bottom-links span {
+  font-size: 0.95rem; /* Aumentado levemente */
+  color: #f8f9fa; /* cor-clara */
+  display: inline-block; /* Para garantir espaçamento correto */
+  padding: 8px 0;
+  text-align: center;
+}
+
+.footer-bottom-links a:hover {
+  color: #8cc9cc; /* cor-principal */
+  text-decoration: underline;
+}
+
+/* Garantir que não haja espaço entre o footer e o footer-bottom-links */
+footer + .footer-bottom-links {
+  margin-top: 0;
 }
 
 /* Plugin animação */
@@ -264,4 +591,335 @@ img {
   transform: translate3d(0, 0, 0);
   transition: 0.3s;
 }
+
+/* Melhorando a responsividade de imagens específicas */
+.estetica-img {
+  overflow: hidden;
+  max-height: 500px; /* Limita a altura em telas grandes */
+}
+
+.estetica-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Mantém a proporção da imagem e cobre o espaço disponível */
+}
+
+@media (max-width: 991px) {
+  .estetica-img {
+    max-height: 300px; /* Altura reduzida em telas menores */
+  }
+}
+
+@media (max-width: 767px) {
+  .estetica-img {
+    max-height: 250px; /* Altura ainda menor em dispositivos móveis */
+  }
+}
+
+/* Melhorias para a navegação mobile */
+@media (max-width: 767px) {
+  .navbar {
+    padding: 10px 0;
+  }
+  
+  .navbar-toggler {
+    padding: 4px 8px;
+    font-size: 1.1rem;
+  }
+  
+  .site-logo {
+    max-height: 40px;
+    width: auto;
+  }
+}
+
+/* Melhorias para botões em dispositivos móveis */
+@media (max-width: 540px) {
+  .button-principal.btn-lg {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    white-space: normal;
+  }
+  
+  .footer-info li .btn {
+    margin-left: 0 !important;
+    margin-top: 5px;
+  }
+}
+
 /* Animação */
+
+/* Melhorando legibilidade do texto em fundos coloridos */
+/* Texto específico para fundo azul (mais escuro para melhor contraste) */
+.text-azul-bg {
+  color: #002a3a; /* Azul escuro quase preto para texto sobre fundo azul claro */
+  font-weight: 500; /* Um pouco mais bold para maior destaque */
+}
+
+/* Texto branco puro para melhor contraste sobre azul */
+.text-white {
+  color: #ffffff !important; /* Branco puro para máximo contraste */
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Sombra sutil para melhorar legibilidade */
+}
+
+/* Títulos em seções com fundo azul */
+.bg-azul h1,
+.bg-azul h2,
+.bg-azul .h1,
+.bg-azul .h2 {
+  color: #ffffff;
+  font-weight: 700;
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Texto em seções com fundo azul */
+.bg-azul p,
+.bg-azul li {
+  color: #ffffff;
+  font-weight: 400;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+}
+
+/* Textos de perguntas na seção FAQ */
+#perguntas .lead {
+  color: #ffffff;
+  font-weight: 500;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+}
+
+/* Cor principal */
+.cor-principal {
+  color: #4f8c8f; /* Ajustar para um tom mais escuro do azul */
+}
+
+/* Cor clara com melhor contraste */
+.cor-clara {
+  color: #ffffff; /* Mudado de rgb(215, 216, 210) para branco puro */
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.15); /* Sombra sutil para melhorar legibilidade */
+}
+
+/* Media Queries para Responsividade */
+/* Grandes dispositivos (desktops, menos de 1310px) */
+@media (max-width: 1310px) {
+  .navbar-nav .nav-item {
+    margin: 0 5px; /* Reduzir espaçamento entre itens do menu */
+  }
+  
+  .navbar-nav .nav-link {
+    padding: 8px 10px; /* Reduzir padding dos links */
+    font-size: 1rem; /* Reduzir tamanho da fonte */
+  }
+  
+  .btn-nav-item {
+    margin-left: 10px !important; /* Ajustar margem do botão */
+  }
+}
+
+/* Desktops médios e tablets grandes (menos de 1200px) */
+@media (max-width: 1200px) {
+  .navbar-nav .nav-link {
+    padding: 8px 8px; /* Reduzir ainda mais o padding */
+    font-size: 0.95rem; /* Reduzir ainda mais o tamanho da fonte */
+  }
+  
+  .lead {
+    font-size: 1.1rem; /* Reduzir tamanho dos textos lead */
+  }
+  
+  .service-card {
+    padding: 15px 10px; /* Reduzir padding dos cards de serviço */
+  }
+  
+  .redonda {
+    width: 100px; /* Reduzir tamanho das imagens redondas */
+    height: 100px;
+  }
+}
+
+/* Tablets e dispositivos menores (menos de 1080px) */
+@media (max-width: 1080px) {
+  .agendamento-btn.button-secundario {
+    padding: 8px 15px; /* Botão de agendamento mais compacto */
+    font-size: 0.9rem;
+  }
+  
+  .imagem {
+    background-size: 40%; /* Reduzir tamanho da imagem de fundo */
+  }
+}
+
+/* Tablets (menos de 991px) */
+@media (max-width: 991px) {
+  /* Telas menores que LG */
+  .nav-cima .link-cima {
+    justify-content: flex-start; /* Alinhar à esquerda em telas menores */
+    padding: 5px 0; /* Adicionar um pouco de espaçamento vertical */
+  }
+  
+  .nav-cima .row > .col-lg-6:last-child .link-cima {
+    justify-content: flex-start; /* Manter alinhamento à esquerda para o segundo item também */
+  }
+  
+  .navbar-collapse {
+    background-color: rgba(255, 255, 255, 0.98);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+  }
+  
+  .navbar-nav {
+    align-items: flex-start;
+  }
+  
+  .navbar-nav .nav-item {
+    margin: 5px 0;
+    width: 100%;
+  }
+  
+  .navbar-nav .nav-link {
+    text-align: left;
+    padding: 10px 15px;
+  }
+  
+  .btn-nav-item {
+    margin: 10px 0 0 0 !important;
+    width: 100%;
+  }
+  
+  .agendamento-btn.button-secundario {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Ajustes para as seções com imagens */
+  #estetica-facial .row,
+  #estetica-corporal .row {
+    flex-direction: column-reverse;
+  }
+  
+  #estetica-facial .col-lg-6,
+  #estetica-corporal .col-lg-6 {
+    width: 100%;
+  }
+  
+  /* Melhorar espaçamento e layout nos serviços */
+  .service-card {
+    padding: 20px;
+    margin-bottom: 15px;
+  }
+}
+
+/* Dispositivos móveis (menos de 767px) */
+@media (max-width: 767px) {
+  #sobre .col-md-6 {
+    padding: 15px 25px; /* Mais padding horizontal em dispositivos móveis */
+  }
+
+  #sobre img {
+    margin-bottom: 20px; /* Espaço abaixo da imagem em dispositivos móveis */
+  }
+  
+  .section-divider-cta {
+    padding: 40px 0;
+    background-attachment: scroll; /* Desativar parallax em dispositivos móveis */
+  }
+  
+  h1, .h1, .display-5 {
+    font-size: 1.8rem; /* Reduzir tamanho dos títulos principais */
+  }
+  
+  h2, .h2, h3, .h3 {
+    font-size: 1.3rem; /* Reduzir tamanho dos subtítulos */
+  }
+  
+  .lead {
+    font-size: 1rem;
+  }
+  
+  .button-base {
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .footer-info li {
+    font-size: 0.95rem !important;
+  }
+  
+  .footer-bottom-links .row {
+    flex-direction: column;
+  }
+  
+  .footer-bottom-links span,
+  .footer-bottom-links a {
+    text-align: center;
+    width: 100%;
+    margin: 5px 0;
+  }
+}
+
+/* Dispositivos móveis pequenos (menos de 540px) */
+@media (max-width: 540px) {
+  .nav-cima {
+    font-size: 0.8rem;
+    height: auto;
+    padding: 5px 0;
+  }
+  
+  .nav-cima .row {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .nav-cima .link-cima {
+    justify-content: center;
+    padding: 3px 0;
+  }
+  
+  .redonda {
+    width: 90px;
+    height: 90px;
+  }
+  
+  .service-card {
+    padding: 15px 5px;
+  }
+  
+  #perguntas .lead {
+    font-size: 1rem;
+    padding: 10px 15px;
+  }
+  
+  #perguntas .collapse p {
+    padding: 12px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Smartphones muito pequenos (menos de 380px) */
+@media (max-width: 380px) {
+  .site-logo {
+    max-width: 120px; /* Reduzir tamanho do logo */
+  }
+  
+  .button-base {
+    padding: 8px 14px;
+    font-size: 0.85rem;
+  }
+  
+  h1, .h1, .display-5 {
+    font-size: 1.6rem;
+  }
+  
+  .redonda {
+    width: 80px;
+    height: 80px;
+    border-width: 2px;
+  }
+  
+  .footer-info li img {
+    width: 16px;
+    height: 16px;
+  }
+}

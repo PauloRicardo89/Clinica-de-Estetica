@@ -13,19 +13,17 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="bg-escuro">
-      <div class="container nav-cima py-1">
-        <div class="row text-center">
+  <header class="bg-escuro">
+      <div class="container nav-cima">
+        <div class="row">
           <span class="col-lg-6 link-cima"><img src="imgs/icones/icone_branco_indicador.svg" alt=""> Rua Presidente Vargas, Centro, RJ</span>
           <span class="col-lg-6 link-cima"><img src="imgs/icones/icone_branco_telefone.svg" alt=""> (21)99999-9999</span>
-          </div>
+        </div>
       </div>
-    </header>
-    <!-- Inicio Navegação -->
-    <nav class="navbar navbar-expand-md navbar-light bg py-4">
+    </header>    <!-- Inicio Navegação -->    <nav class="navbar navbar-expand-md navbar-light bg py-4">
       <div class="container">
         <a class="nav-brand" href="#">
-          <img src="imgs/Clinica de Estetica.png" alt="Logo" />
+          <img src="imgs/logo-estetica.svg" alt="Logo Bella Estética" class="site-logo" />
         </a>
 
         <button
@@ -40,8 +38,7 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">          <ul class="navbar-nav ms-auto">
             <li class="nav-item">
               <a class="nav-link animacao" href="#sobre"><span class="link">Sobre</span></a>
             </li>
@@ -52,17 +49,23 @@
               <a class="nav-link animacao" href="#estetica-corporal"><span class="link">Estética Corporal</span></a>
             </li>
             <li class="nav-item">
+              <a class="nav-link animacao" href="#servicos-faciais"><span class="link">Serviços Faciais</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link animacao" href="#servicos-corporais"><span class="link">Serviços Corporais</span></a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link animacao" href="#perguntas"><span class="link">Perguntas</span></a>
             </li>
             <li class="nav-item">
               <a class="nav-link animacao" href="#contato"><span class="link">Contato</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item btn-nav-item">
               <a
-                class="btn button-secundario ms-md-2"
-                style="padding: 10px 20px; font-size: 1.2rem;"
+                class="btn button-secundario agendamento-btn"
                 href="https://wa.me/55021980877182"
-                target="_blank"
+                target="_blank" 
+                rel="noopener"
                 >AGENDAR CONSULTA</a
               >
             </li>
@@ -70,14 +73,12 @@
         </div>
       </div>
     </nav>
-    <!-- Fim Navegação -->
-
-    <!-- Section Inicio -->
-    <section>
+    <!-- Fim Navegação -->  <!-- Section Inicio -->
+    <section>      
       <div class="bg-azul container">
-        <div class=" mb-5">
+        <div class="mb-5">
           <div class="imagem">
-            <div class="p-5 text-white">
+            <div class="p-3 p-md-5">
               <h1 class="h1 pb-3 maior" data-anime="150">
               Você não precisa se sentir assim !
               </h1>
@@ -94,6 +95,7 @@
               class="button-principal btn-lg mt-4"
               href="https://wa.me/55021980877182"
               target="_blank"
+              rel="noopener"
               >
               AGENDAR AVALIAÇÃO GRÁTIS
               </a>
@@ -102,141 +104,138 @@
         </div>
       </div>
     </section>
-    <!-- Section Inicio -->
-
-    <!-- Section Sobre a empresa -->
-    <section id="sobre" data-anime="400">
-      <div>
-        <div class="">
-          <div class="row d-flex align-items-center bg-azul">
-            <div class="col-lg-6 p-0 m-0">
-              <img src="imgs/estetica2.jpg" alt="" />
+    <!-- Section Inicio -->    <!-- Section Sobre Nós -->
+    <section id="sobre">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center mb-5">
+            <h1 class="display-5 cor-principal">SOBRE NOSSA CLÍNICA</h1>
+            <span class="linha bg-azul2 mx-auto"></span>
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-5 mb-4">
+            <img src="imgs/Estetica-avancada.jpg" alt="Clínica de Estética" class="img-fluid rounded shadow">
+          </div>
+          <div class="col-md-1"></div><!-- Coluna vazia para criar espaço entre imagem e texto -->
+          <div class="col-md-6">
+            <h2 class="h3 cor-principal mb-4">Bem-vindo à nossa Clínica de Estética</h2>
+            <p class="lead">Somos um centro de beleza e bem-estar dedicado a realçar sua beleza natural e restaurar sua confiança. Nossa equipe de profissionais qualificados trabalha com as mais avançadas técnicas e tecnologias disponíveis no mercado.</p>
+            <p>Oferecemos tratamentos personalizados que respeitam as características e necessidades individuais de cada cliente. Nosso compromisso é proporcionar resultados visíveis e duradouros, sempre priorizando a saúde e o bem-estar.</p>
+            <div class="mt-4">
+              <h3 class="h5 cor-principal mb-3">Por que nos escolher?</h3>
+              <ul>
+                <li>Profissionais altamente qualificados</li>
+                <li>Equipamentos de última geração</li>
+                <li>Atendimento personalizado</li>
+                <li>Ambiente acolhedor e confortável</li>
+                <li>Protocolos de segurança e higiene rigorosos</li>
+              </ul>
             </div>
-
-            <div class="col-lg-6 p-5">
-              <h1 class="display-5 text-white">ESTÉTICA FACIAL</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Fim Section Sobre Nós -->    <!-- Section Estética Facial -->
+    <section id="estetica-facial" data-anime="400">
+      <div class="container-fluid">
+          <div class="row d-flex align-items-center bg-azul">
+            <div class="col-lg-6 p-0 m-0 estetica-img">
+              <img src="imgs/estetica2.jpg" alt="Estética Facial" class="img-fluid" />
+            </div>
+            <div class="col-lg-6 p-3 p-md-5">
+              <h1 class="display-5">ESTÉTICA FACIAL</h1>
               <span class="linha"></span>
-              <p class="text-white lead">
+              <p class="lead">
                 Cuidamos da beleza e saúde do seu rosto com tratamentos personalizados que promovem rejuvenescimento, luminosidade e equilíbrio. Oferecemos soluções para hidratação, redução de linhas de expressão, manchas, acne e muito mais, realçando sua beleza natural. Sinta-se confiante e radiante!
               </p>
-              <div>
-            </div>
             </div>
           </div>
-        </div>
       </div>
     </section>
-    <!-- Section Sobre a empresa -->
-
-    <!-- Section Sobre a empresa -->
-    <section id="sobre" data-anime="400">
-      <div>
-        <div class="py-0">
+    <!-- Fim Section Estética Facial -->    <!-- Section Estética Corporal -->
+    <section id="estetica-corporal" data-anime="400">
+      <div class="container-fluid">
           <div class="row d-flex align-items-center bg-azul">
-            <div class="col-lg-6 p-5">
-              <h1 class="display-5 text-white">ESTÉTICA CORPORAL</h1>
+            <div class="col-lg-6 p-3 p-md-5">
+              <h1 class="display-5">ESTÉTICA CORPORAL</h1>
               <span class="linha"></span>
-              <p class="text-white lead">
+              <p class="lead">
                 Transforme seu corpo e eleve sua autoestima com nossos tratamentos personalizados. Oferecemos soluções para redução de medidas, celulite, flacidez e retenção de líquidos, promovendo equilíbrio, saúde e bem-estar. Cuide-se e sinta-se incrível em sua própria pele!
               </p>
-
             </div>
-
-            <div class="col-lg-6 p-0 m-0">
-              <img src="imgs/estetica3.webp" alt="" />
-            <div>
-            </div>
+            <div class="col-lg-6 p-0 m-0 estetica-img">
+              <img src="imgs/estetica3.webp" alt="Estética Corporal" class="img-fluid" />
             </div>
           </div>
-        </div>
       </div>
     </section>
-    <!-- Section Sobre a empresa -->
-
-    <!-- Section Serviços -->
-    <section id="servicos" class="js-scroll p-5">
+    <!-- Fim Section Estética Corporal -->    <!-- Section Serviços -->
+    <section id="servicos-faciais" class="js-scroll p-3 p-md-5">
       <div class="container">
-        <h1 class="display-5 pb-5 cor-principal text-center">ESTÉTICA FACIAL</h1>
+        <h1 class="display-5 pb-3 pb-md-5 cor-principal text-center">ESTÉTICA FACIAL</h1>
 
         <div class="row">
-          <div class="col-lg-3 text-center p-5 animacao">
-            <div>
-              <img class="redonda" src="imgs/bioestimulador-colageno.png" alt="" />
-            </div>
-            <div class="pt-2">
-              <h2 class="h3">Bioestimulador de colágeno</h2>
-            </div>
+          <div class="col-6 col-md-6 col-lg-3 text-center p-2 p-md-3 p-lg-5 animacao service-card">
+              <img class="redonda" src="imgs/bioestimulador-colageno.png" alt="Bioestimulador de colágeno" />
+              <div class="pt-3">
+                <h2 class="h3">Bioestimulador de colágeno</h2>
+              </div>
           </div>
-
-          <div class="col-lg-3 text-center p-5 animacao">
-            <div>
-              <img class="redonda" src="imgs/preenchimento-facial.png" alt="" />
-            </div>
-            <div class="pt-2">
-              <h2 class="h3">Preenchimento Facial</h2>
-            </div>
+          <div class="col-6 col-md-6 col-lg-3 text-center p-2 p-md-3 p-lg-5 animacao service-card">
+              <img class="redonda" src="imgs/preenchimento-facial.png" alt="Preenchimento Facial" />
+              <div class="pt-3">
+                <h2 class="h3">Preenchimento Facial</h2>
+              </div>
           </div>
-
-          <div class="col-lg-3 text-center p-5 animacao">
-            <div>
-              <img class="redonda" src="imgs/toxina-butolinica.png" alt="" />
-            </div>
-            <div class="pt-2">
-              <h2 class="h3">Toxina Botulínica</h2>
-            </div>
+          <div class="col-6 col-md-6 col-lg-3 text-center p-2 p-md-3 p-lg-5 animacao service-card">
+              <img class="redonda" src="imgs/toxina-butolinica.png" alt="Toxina Botulínica" />
+              <div class="pt-3">
+                <h2 class="h3">Toxina Botulínica</h2>
+              </div>
           </div>
-
-          <div class="col-lg-3 text-center p-5 animacao">
-            <div>
-              <img class="redonda" src="imgs/fios-de-sustentacao.png" alt="" />
-            </div>
-            <div class="pt-2">
-              <h2 class="h3">Fios de sustentação</h2>
-            </div>
+          <div class="col-6 col-md-6 col-lg-3 text-center p-2 p-md-3 p-lg-5 animacao service-card">
+              <img class="redonda" src="imgs/fios-de-sustentacao.png" alt="Fios de sustentação" />
+              <div class="pt-3">
+                <h2 class="h3">Fios de sustentação</h2>
+              </div>
           </div>
 
         </div>
 
       </div>
     </section>
-    <!-- Section Serviços -->
-
-        <!-- Section Serviços -->
-        <section id="servicos" class="js-scroll p-5">
+    <!-- Section Serviços -->        <!-- Section Serviços -->
+        <section id="servicos-corporais" class="js-scroll p-3 p-md-5">
           <div class="container">
-            <h1 class="display-5 pb-5 cor-principal text-center">ESTÉTICA CORPORAL</h1>
+            <h1 class="display-5 pb-3 pb-md-5 cor-principal text-center">ESTÉTICA CORPORAL</h1>
     
             <div class="row">
-              <div class="col-lg-3 text-center p-5 animacao">
-                <div>
-                  <img class="redonda" src="imgs/massagem-modeladora.png" alt="" />
-                </div>
-                <div class="pt-2">
-                  <h2 class="h3">Massagem modeladora</h2>
-                </div>
+              <div class="col-6 col-md-6 col-lg-3 text-center p-2 p-md-3 p-lg-5 animacao service-card">
+                  <img class="redonda" src="imgs/massagem-modeladora.png" alt="Massagem modeladora" />
+                  <div class="pt-3">
+                    <h2 class="h3">Massagem modeladora</h2>
+                  </div>
+              </div>
+              <div class="col-6 col-md-6 col-lg-3 text-center p-2 p-md-3 p-lg-5 animacao service-card">
+                  <img class="redonda" src="imgs/radio-frequencia.png" alt="Radiofrequência" />
+                  <div class="pt-3">
+                    <h2 class="h3">Radiofrequência</h2>
+                  </div>
               </div>
     
-              <div class="col-lg-3 text-center p-5 animacao">
+              <div class="col-6 col-md-6 col-lg-3 text-center p-2 p-md-3 p-lg-5 animacao service-card">
                 <div>
-                  <img class="redonda" src="imgs/radio-frequencia.png" alt="" />
-                </div>
-                <div class="pt-2">
-                  <h2 class="h3">Radiofrequência</h2>
-                </div>
-              </div>
-    
-              <div class="col-lg-3 text-center p-5 animacao">
-                <div>
-                  <img class="redonda" src="imgs/drenagem-linfatica.png" alt="" />
+                  <img class="redonda" src="imgs/drenagem-linfatica.png" alt="Drenagem Linfática" />
                 </div>
                 <div class="pt-2">
                   <h2 class="h3">Drenagem linfática</h2>
                 </div>
               </div>
     
-              <div class="col-lg-3 text-center p-5 animacao">
+              <div class="col-6 col-md-6 col-lg-3 text-center p-2 p-md-3 p-lg-5 animacao service-card">
                 <div>
-                  <img class="redonda" src="imgs/massagem-relaxante.png" alt="" />
+                  <img class="redonda" src="imgs/massagem-relaxante.png" alt="Massagem Relaxante" />
                 </div>
                 <div class="pt-2">
                   <h2 class="h3">Massagem relaxante</h2>
@@ -254,29 +253,27 @@
       <!-- <section class="bgimg d-flex" style="height: 230px">
         <div class="container text-center text-white align-content-center py-5">
           <h2 class="h2">Faça agora sua avaliação gratuita</h2>
-      
           <a type="button" class="btn button-secundario mt-3" href="https://wa.me/55021980877182"
-          target="_blank">
+          target="_blank" rel="noopener">
             AGENDAR AVALIAÇÃO GRÁTIS
+          </a>
           </a>
         </div>
       </section> -->
       
-    <!-- Section divisoria -->
-
-    <!-- Início (Faq) -->
-  <section id="perguntas" class="js-scroll bg-azul">
-    <div class="container py-5">
+    <!-- Section divisoria -->    <!-- Início (Faq) -->  
+    <section id="perguntas" class="js-scroll bg-azul">
+    <div class="container py-3 py-md-5">
 
       <div class="text-center">
-        <h1 class="display-5 text-center pb-5 text-white">PERGUNTAS E RESPOSTAS</h1>
+        <h1 class="display-5 text-center pb-3 pb-md-5">PERGUNTAS E RESPOSTAS</h1>
       </div>
 
       <div class="row justify-content-center">
-        <div class="col-md-6">
+        <div class="col-md-8 col-lg-6">
 
           <div class="py-2">
-            <a class="lead text-white" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+            <a class="lead" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
               1. Quais tipos de tratamentos estéticos vocês oferecem?
             </a>
             <div class="collapse show" id="collapseExample1">
@@ -285,10 +282,8 @@
               </p>
             </div>
 
-            <hr class="dropdown-divider">
-
-            <div class="py-2">
-              <a class="lead text-white" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+            <hr class="dropdown-divider">            <div class="py-2">
+              <a class="lead" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
                 2. Os tratamentos são seguros?
               </a>
               <div class="collapse" id="collapseExample2">
@@ -298,10 +293,8 @@
               </div>
             </div>
 
-            <hr class="dropdown-divider">
-
-            <div class="py-2">
-              <a class="lead text-white" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
+            <hr class="dropdown-divider">            <div class="py-2">
+              <a class="lead" data-bs-toggle="collapse" href="#collapseExample3" role="button" aria-expanded="false" aria-controls="collapseExample3">
                 3. Quanto tempo dura cada procedimento?
               </a>
               <div class="collapse" id="collapseExample3">
@@ -311,10 +304,8 @@
               </div>
             </div>
 
-            <hr class="dropdown-divider">
-
-            <div class="py-2">
-              <a class="lead text-white" data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
+            <hr class="dropdown-divider">            <div class="py-2">
+              <a class="lead" data-bs-toggle="collapse" href="#collapseExample4" role="button" aria-expanded="false" aria-controls="collapseExample4">
                 4. Os resultados são imediatos?
               </a>
               <div class="collapse" id="collapseExample4">
@@ -324,10 +315,8 @@
               </div>
             </div>
 
-            <hr class="dropdown-divider">
-
-            <div class="py-2">
-              <a class="lead text-white" data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5">
+            <hr class="dropdown-divider">            <div class="py-2">
+              <a class="lead" data-bs-toggle="collapse" href="#collapseExample5" role="button" aria-expanded="false" aria-controls="collapseExample5">
                 5. Como agendar uma consulta ou sessão?
               </a>
               <div class="collapse" id="collapseExample5" data-parent="collapseExample5">
@@ -344,41 +333,40 @@
   </section>
 
   <!-- Fim (Faq) -->
-
-  <!-- Inicio Footer -->
-  <footer id="contato" class="bg-azul2">
-    <div class="container py-5 text-center text-white">
+  <!-- Inicio Footer -->  <footer id="contato" class="bg-azul2">
+    <div class="container py-4 py-md-5 text-white">
       <div class="row">
-
-        <div class="col-md-6 col-12">
-          <h4 class="h5">ATENDIMENTO</h4>
-          <ul class="list-unstyled">
-            <li><span>Rua Presidente Vargas, Centro - RJ</span></li>
-            <li><span>De Seg. à Sex. das 8h às 18h</span></li>
+        <div class="col-md-6 col-12 mb-4 mb-md-0">
+          <h4 class="h4 mb-3 mb-md-4">ATENDIMENTO</h4>
+          <ul class="list-unstyled footer-info">
+            <li><img src="imgs/icones/icone_branco_indicador.svg" alt="Endereço"> <span>Rua Presidente Vargas, 1200 - Centro, Rio de Janeiro - RJ</span></li>
+            <li><img src="imgs/icones/icone_branco_relogio.svg" alt="Horário"> <span>Segunda à Sexta das 8h às 18h</span></li>
           </ul>
         </div>
-
-        <div class="col-md-6">
-          <h4 class="h5">CONTATO</h4>
-          <ul class="list-unstyled">
-            <li>(21)96666-6666</li>
-            <li>clinicadeestetica@estetica.com</li>
+        <div class="col-md-6 col-12">
+          <h4 class="h4 mb-3 mb-md-4">CONTATO</h4>
+          <ul class="list-unstyled footer-info">
+            <li><img src="imgs/icones/icone_branco_telefone.svg" alt="Telefone"> <span>(21) 9666-6666</span></li>
+            <li class="d-flex flex-wrap align-items-center">
+              <img src="imgs/icones/icone_branco_telefone.svg" alt="WhatsApp"> 
+              <span class="me-2">(21) 98087-7182</span> 
+              <a href="https://wa.me/55021980877182" class="btn btn-sm btn-light mt-1 mt-md-0">Enviar mensagem</a>
+            </li>
+            <li><img src="imgs/icones/icone_branco_email.svg" alt="Email"> <span>contato@bellaestetica.com.br</span></li>
           </ul>
         </div>
 
       </div>
     </div>
-  </footer>
-
-  <div class="h4 d-flex gap-5 justify-content-center p-3 text-center">
-    <div class="row">
-      <span class="col-sm-4 m-0">Direitos reservados.</span>
-      <a class="col-sm-4 m-0" href="/termos-de-uso.html">Termos de uso</a>
-      <a class="col-sm-4 m-0" href="/politica-de-privacidade.html">Política de Privacidade</a>
+  </footer>  <div class="footer-bottom-links">
+    <div class="container">
+      <div class="row text-center">
+        <span class="col-12 col-sm-4 mb-2 mb-sm-0">© 2025 Bella Estética - Todos os direitos reservados.</span>
+        <a class="col-12 col-sm-4 mb-2 mb-sm-0" href="/termos-de-uso.html">Termos de uso</a>
+        <a class="col-12 col-sm-4" href="/politica-de-privacidade.html">Política de Privacidade</a>
+      </div>
     </div>
-
-  </div>
-  <!-- Fim Footer -->
+  </div><!-- Fim Footer -->
  
   <!-- Script typebot -->
   <script type="module">
@@ -398,13 +386,43 @@
   </script>
   <!-- Script Typebot -->
 
-    <script
+  <!-- Script de rolagem suave -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Seleciona todos os links da navegação que começam com #
+      const navLinks = document.querySelectorAll('a.nav-link[href^="#"]');
+      
+      // Adiciona evento de clique a cada link
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          // Obtém o ID da seção alvo
+          const targetId = this.getAttribute('href');
+          
+          // Se o ID é válido e a seção existe
+          if(targetId && targetId !== '#') {
+            const targetSection = document.querySelector(targetId);
+            
+            if(targetSection) {
+              // Rolagem suave
+              window.scrollTo({
+                top: targetSection.offsetTop - 80, // 80px de offset para o menu fixo
+                behavior: 'smooth'
+              });
+            }
+          }
+        });
+      });
+    });
+  </script>
+  <!-- Fim Script de rolagem suave -->    <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
 
-    <script src="plugins/simple-anime.js"></script>;
+    <script src="plugins/simple-anime.js"></script>
 
     <script src="script.js"></script>
   </body>
