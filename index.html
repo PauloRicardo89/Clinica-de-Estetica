@@ -385,38 +385,7 @@
     });
   </script>
   <!-- Script Typebot -->
-
-  <!-- Script de rolagem suave -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      // Seleciona todos os links da navegação que começam com #
-      const navLinks = document.querySelectorAll('a.nav-link[href^="#"]');
-      
-      // Adiciona evento de clique a cada link
-      navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-          e.preventDefault();
-          
-          // Obtém o ID da seção alvo
-          const targetId = this.getAttribute('href');
-          
-          // Se o ID é válido e a seção existe
-          if(targetId && targetId !== '#') {
-            const targetSection = document.querySelector(targetId);
-            
-            if(targetSection) {
-              // Rolagem suave
-              window.scrollTo({
-                top: targetSection.offsetTop - 80, // 80px de offset para o menu fixo
-                behavior: 'smooth'
-              });
-            }
-          }
-        });
-      });
-    });
-  </script>
-  <!-- Fim Script de rolagem suave -->    <script
+  <!-- A função de rolagem suave foi movida para o arquivo script.js --><script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
