@@ -621,12 +621,12 @@ footer + .footer-bottom-links {
   .navbar {
     padding: 10px 0;
   }
-  
+
   .navbar-toggler {
     padding: 4px 8px;
     font-size: 1.1rem;
   }
-  
+
   .site-logo {
     max-height: 40px;
     width: auto;
@@ -640,7 +640,7 @@ footer + .footer-bottom-links {
     font-size: 0.9rem;
     white-space: normal;
   }
-  
+
   .footer-info li .btn {
     margin-left: 0 !important;
     margin-top: 5px;
@@ -704,12 +704,12 @@ footer + .footer-bottom-links {
   .navbar-nav .nav-item {
     margin: 0 5px; /* Reduzir espaçamento entre itens do menu */
   }
-  
+
   .navbar-nav .nav-link {
     padding: 8px 10px; /* Reduzir padding dos links */
     font-size: 1rem; /* Reduzir tamanho da fonte */
   }
-  
+
   .btn-nav-item {
     margin-left: 10px !important; /* Ajustar margem do botão */
   }
@@ -721,15 +721,15 @@ footer + .footer-bottom-links {
     padding: 8px 8px; /* Reduzir ainda mais o padding */
     font-size: 0.95rem; /* Reduzir ainda mais o tamanho da fonte */
   }
-  
+
   .lead {
     font-size: 1.1rem; /* Reduzir tamanho dos textos lead */
   }
-  
+
   .service-card {
     padding: 15px 10px; /* Reduzir padding dos cards de serviço */
   }
-  
+
   .redonda {
     width: 100px; /* Reduzir tamanho das imagens redondas */
     height: 100px;
@@ -742,7 +742,7 @@ footer + .footer-bottom-links {
     padding: 8px 15px; /* Botão de agendamento mais compacto */
     font-size: 0.9rem;
   }
-  
+
   .imagem {
     background-size: 40%; /* Reduzir tamanho da imagem de fundo */
   }
@@ -755,11 +755,11 @@ footer + .footer-bottom-links {
     justify-content: flex-start; /* Alinhar à esquerda em telas menores */
     padding: 5px 0; /* Adicionar um pouco de espaçamento vertical */
   }
-  
+
   .nav-cima .row > .col-lg-6:last-child .link-cima {
     justify-content: flex-start; /* Manter alinhamento à esquerda para o segundo item também */
   }
-  
+
   .navbar-collapse {
     background-color: rgba(255, 255, 255, 0.98);
     padding: 15px;
@@ -767,43 +767,43 @@ footer + .footer-bottom-links {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
   }
-  
+
   .navbar-nav {
     align-items: flex-start;
   }
-  
+
   .navbar-nav .nav-item {
     margin: 5px 0;
     width: 100%;
   }
-  
+
   .navbar-nav .nav-link {
     text-align: left;
     padding: 10px 15px;
   }
-  
+
   .btn-nav-item {
     margin: 10px 0 0 0 !important;
     width: 100%;
   }
-  
+
   .agendamento-btn.button-secundario {
     display: block;
     width: 100%;
     text-align: center;
   }
-  
+
   /* Ajustes para as seções com imagens */
   #estetica-facial .row,
   #estetica-corporal .row {
     flex-direction: column-reverse;
   }
-  
+
   #estetica-facial .col-lg-6,
   #estetica-corporal .col-lg-6 {
     width: 100%;
   }
-  
+
   /* Melhorar espaçamento e layout nos serviços */
   .service-card {
     padding: 20px;
@@ -820,37 +820,42 @@ footer + .footer-bottom-links {
   #sobre img {
     margin-bottom: 20px; /* Espaço abaixo da imagem em dispositivos móveis */
   }
-  
+
   .section-divider-cta {
     padding: 40px 0;
     background-attachment: scroll; /* Desativar parallax em dispositivos móveis */
   }
-  
-  h1, .h1, .display-5 {
+
+  h1,
+  .h1,
+  .display-5 {
     font-size: 1.8rem; /* Reduzir tamanho dos títulos principais */
   }
-  
-  h2, .h2, h3, .h3 {
+
+  h2,
+  .h2,
+  h3,
+  .h3 {
     font-size: 1.3rem; /* Reduzir tamanho dos subtítulos */
   }
-  
+
   .lead {
     font-size: 1rem;
   }
-  
+
   .button-base {
     padding: 10px 16px;
     font-size: 0.9rem;
   }
-  
+
   .footer-info li {
     font-size: 0.95rem !important;
   }
-  
+
   .footer-bottom-links .row {
     flex-direction: column;
   }
-  
+
   .footer-bottom-links span,
   .footer-bottom-links a {
     text-align: center;
@@ -866,31 +871,31 @@ footer + .footer-bottom-links {
     height: auto;
     padding: 5px 0;
   }
-  
+
   .nav-cima .row {
     flex-direction: column;
     height: auto;
   }
-  
+
   .nav-cima .link-cima {
     justify-content: center;
     padding: 3px 0;
   }
-  
+
   .redonda {
     width: 90px;
     height: 90px;
   }
-  
+
   .service-card {
     padding: 15px 5px;
   }
-  
+
   #perguntas .lead {
     font-size: 1rem;
     padding: 10px 15px;
   }
-  
+
   #perguntas .collapse p {
     padding: 12px 15px;
     font-size: 0.9rem;
@@ -902,22 +907,24 @@ footer + .footer-bottom-links {
   .site-logo {
     max-width: 120px; /* Reduzir tamanho do logo */
   }
-  
+
   .button-base {
     padding: 8px 14px;
     font-size: 0.85rem;
   }
-  
-  h1, .h1, .display-5 {
+
+  h1,
+  .h1,
+  .display-5 {
     font-size: 1.6rem;
   }
-  
+
   .redonda {
     width: 80px;
     height: 80px;
     border-width: 2px;
   }
-  
+
   .footer-info li img {
     width: 16px;
     height: 16px;
@@ -929,51 +936,55 @@ footer + .footer-bottom-links {
   .navbar-brand {
     max-width: 110px;
   }
-  
-  h1, .h1, .display-5 {
+
+  h1,
+  .h1,
+  .display-5 {
     font-size: 1.5rem;
   }
-  
-  h2, .h2 {
+
+  h2,
+  .h2 {
     font-size: 1.2rem;
   }
-  
-  h3, .h3 {
+
+  h3,
+  .h3 {
     font-size: 1.1rem;
   }
-  
+
   .lead {
     font-size: 0.9rem;
   }
-  
+
   .redonda {
     width: 75px;
     height: 75px;
   }
-  
+
   .col-6 {
     padding-left: 5px;
     padding-right: 5px;
   }
-  
+
   .service-card {
     padding: 10px 0;
   }
-  
+
   .button-base {
     padding: 8px 12px;
     font-size: 0.8rem;
   }
-  
+
   .footer-info li {
     font-size: 0.85rem !important;
   }
-  
+
   #perguntas .lead {
     padding: 8px 12px 8px 25px;
     font-size: 0.9rem;
   }
-  
+
   #perguntas .lead:before {
     left: 8px;
   }
