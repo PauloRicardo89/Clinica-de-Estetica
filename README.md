@@ -77,9 +77,8 @@ Este projeto está sob a licença MIT. Consulte o arquivo [LICENSE](./LICENSE) p
 
 Para questões, sugestões ou colaborações:
 
-- Email: [seu-email@exemplo.com](mailto:seu-email@exemplo.com)
-- GitHub: [seu-usuario](https://github.com/seu-usuario)
-- LinkedIn: [seu-perfil](https://linkedin.com/in/seu-perfil)
+- Email: pr.pauloricardo@live.com
+- LinkedIn: www.linkedin.com/in/pauloricardo89
 
 ---
 
